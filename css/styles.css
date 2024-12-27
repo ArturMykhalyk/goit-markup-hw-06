@@ -1,3 +1,5 @@
+/*global style */
+
 body{
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -22,27 +24,65 @@ body{
  h6,
  p {
      margin: 0;
+     padding: 0;
  }
 
- img {
-     display: block;
- }
+img {
+    display: block;
+    max-width: 100%;
+}
 
- .start-scr,
- .business,
- .sec-team,
- .portf-list {
-     padding-top: 120px;
-     padding-bottom: 120px;
- }
+
 
  .container {
      margin: 0 auto;
      max-width: 1158px;
     padding: 0 15px 0 15px;
-
-     
+   
  }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+ ul {
+     list-style: none;
+     margin: 0;
+     padding-left: 0;
+ }
+
+ h1,
+ h1,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+     margin: 0;
+ }
+ .visually-hidden {
+     position: absolute;
+
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+
+     white-space: nowrap;
+
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+ }
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/*header*/
 
  .page-header{
     border-bottom: 1px solid #e7e9fc;
@@ -50,6 +90,7 @@ body{
 
  }
  
+ /*logo*/
 .logof{
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -79,6 +120,8 @@ align-items: center;
 
 }
 
+/* nav*/
+
 .menu-links{
     display:flex; 
     gap: 40px;
@@ -86,12 +129,6 @@ align-items: center;
  
 
 }
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 .menu-links .link{
 
     font-weight: 500;
@@ -105,42 +142,44 @@ align-items: center;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
-.box .link {
+
+
+
+.menu-links .box {
     position: relative;
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.box .link::after {
+.box::after {
     content: "";
     display: flex;
     width: 100%;
     height: 4px;
-    
     background-color: #404bbf;
     border-radius: 2px;
     position: absolute;
     left: 0;
     bottom: -1px;
    }
+   
 .menu-links .link:hover{color: #404bbf;}
 .menu-links .link:active, .menu-links .link:focus{
     color: #404bbf;
     text-decoration: underline;
 }
- ul{list-style-type:none;
-margin: 0;
-padding-left: 0;}
- h1,h1,h3,h4,h5,h6,p{
-    margin: 0;
- }
-img{
-    display: block;
-} 
 
-.start-scr, .business, .sec-team, .portf-list{
-    padding-top: 120px;
-    padding-bottom: 120px;
+.nav-button{
+    display: none;
+    height: 24px;
+    width: 24px;
+    margin:16px 0;
+    border: none;
+    background-color: transparent;
 }
+
+
+
+
 
 .addr-fon{font-style: normal;}
 
@@ -170,7 +209,7 @@ img{
 
 
 .start-scr{
-       padding: 188px 0;
+    padding: 188px 0;
     background-color: #2e2f42;
     background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_image.jpg);
     background-repeat:no-repeat;
@@ -178,9 +217,12 @@ img{
     background-size: cover;
     max-width: 1440px;
     margin: 0 auto;
-    
-
-}
+   }
+   @media (min-resolution: 192dpi){
+    .start-scr{
+        background-image: url(../images/hero_image@2x.jpg);
+    }
+   }
 
 .start-scr .title{
     max-width: 496px;
@@ -219,6 +261,8 @@ img{
 .start-scr-btn:hover, .start-scr-btn:focus{background-color: #404bbf;}
 
 
+
+
 .second-title{font-weight: 700;
     
     font-size: 36px;
@@ -230,21 +274,6 @@ img{
     margin-bottom: 72px;
     
 }
- .visually-hidden {
-    position: absolute;
-    
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-    
-        white-space: nowrap;
-    
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-    }
 
 .eff-sol-card{
 flex-basis: calc((100% - 72px) / 4);
@@ -310,7 +339,7 @@ flex-basis: calc((100% - 72px) / 4);
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
     flex-basis: calc((100% - 72px) / 4);
-        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
    
 }
 .info-card{
@@ -532,7 +561,7 @@ gap:24px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+      
         border:none;
         font-family: "Roboto", sans-serif;
         border-radius: 4px;
@@ -629,8 +658,7 @@ gap:24px;
 
 .modal .title-form{
     text-align: center;
-    margin-top: 48px;
-    font-weight: 500;   
+      font-weight: 500;   
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -769,4 +797,233 @@ border-color: #4D5AE5;
 
 .send-btn:hover, .send-btn:focus{
     background-color: #404bbf;
+}
+
+
+@media (max-width:767px){
+      section {
+    padding-top: 96px;
+    padding-bottom: 96px;}
+
+    .menu-links, .cont-links{
+        display: none;
+    }
+
+    .nav-button{
+        display: block;
+    }
+/*mobile nav*/ 
+
+
+
+
+
+
+
+    .container {
+            
+        padding: 0 16px 0 16px;
+    
+    }
+
+    /* start screen*/ 
+    .start-scr {
+        padding: 72px 0 ;
+    }
+    .start-scr .title {
+        max-width: 216px;
+        font-size: 36px;
+        line-height: 1.1;
+                 
+    }
+
+    /*eff sol */
+    .eff-sol-icon {
+        display: none;
+    }
+    .section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .business .container .eff-sol {
+    flex-direction: column;
+    gap:72px;
+    }
+    .eff-sol .solution {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    
+    .eff-sol .text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #434455;
+    }
+ /*our team section mobile */ 
+
+ .sec-team .container .team-list{
+  
+    flex-direction: column;
+    gap: 72px;
+    margin:0 12px;
+ }
+   
+    /*Our Portfolio section mobile */ 
+    .portf-list .container .portfolio{
+flex-direction: column;
+  
+
+ }
+
+  /*footer mobile */ 
+ .foot-fon .container{
+   flex-direction: column;
+gap:72px;
+}
+
+.foot-fon .container{
+ 
+align-items: center;
+}
+.foot-fon .foot-start{
+       margin-right: 0px;
+}
+.foot-fon{
+
+    padding: 96px 0;
+}
+.logo-foot{
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+.fot-social{
+    text-align: center;
+}
+.foot-fon .social-conteiner{
+    margin-right: 0px;
+   
+}
+
+.subscribe-form{
+ flex-direction: column;
+    gap: 16px;
+}
+.email-form{
+   
+text-align: center;
+
+}
+
+
+
+.inp-email::placeholder{
+    opacity: 0.6;
+}
+
+
+.inp-email{            
+      
+        opacity: 0.3;
+}
+
+
+.btn-form-subscibe{
+    
+   min-width: 165px;
+margin: 0 auto;  
+     
+
+}
+
+ /*form*/
+ .modal {
+    
+    width: 288px;
+    min-height: 584px;
+    padding: 72px 16px 24px;
+    
+}
+}
+
+
+@media (min-width:768px) and (max-width:1158px){
+
+.cont-links{
+    flex-direction: column;
+    gap: 12px;
+   }
+ /*eff sol */
+    .eff-sol-icon {
+        display: none;
+    }
+ .section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .eff-sol-card{
+flex-basis: calc((100% - 24px) / 2);
+}
+     .business .container .eff-sol {
+    flex-wrap: wrap;
+    row-gap:72px;
+    column-gap: 24px;
+    }
+
+ /*our team section table */ 
+
+ .sec-team .container .team-list{
+  
+    flex-wrap: wrap;
+    row-gap:64px;
+    column-gap: 24px;
+   margin-left: 108px;
+   margin-right: 108px;
+ }
+   
+    .team-list .fon-team {
+  
+    flex-basis: calc((100% - 24px) / 2);
+    
+   }
+
+.portf-list .container .portfolio .team-card{
+    flex-basis: calc((100% - 24px) / 2);
+}
+
+.foot-fon .container{
+   flex-wrap: wrap;
+row-gap:72px;
+column-gap: 24px;
+padding-left: 120px;
+}
+
+
+
+
+.inp-email::placeholder{
+    opacity: 0.6;
+}
+
+
+.inp-email{            
+      
+        opacity: 0.3;
+}
+
+
+.btn-form-subscibe{
+    
+   min-width: 165px;
+
+     
+
+}
+.foot-fon .foot-start{
+       margin-right: 0px;
+}
+
 }
