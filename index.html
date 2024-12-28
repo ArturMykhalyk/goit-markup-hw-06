@@ -20,9 +20,9 @@
 
   <body>
     <header class="page-header">
-      <div class="container">
-        <nav class="logo-menu">
-          <a class="logof" href="./index.html"
+      <div class="container header-container">
+        <nav class="header-nav">
+          <a class="logof heder-logo" href="./index.html"
             >Web<span class="logot">Studio</span></a
           >
 
@@ -34,7 +34,7 @@
             <li><a class="link" href="">Contacts</a></li>
           </ul>
         </nav>
-        <address class="addr-fon">
+        <address class="contacts">
           <ul class="cont-links">
             <li>
               <a class="link" href="mailto:info@devstudio.com"
@@ -47,11 +47,80 @@
           </ul>
         </address>
 
-        <button class="nav-button">
-          <svg class="icon" width="17" height="15">
+        <button class="nav-button" type="button" data-menu-open>
+          <svg class="nav-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-nav-btn-1"></use>
           </svg>
         </button>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-conteiner">
+          <button class="mobile-menu-close" data-menu-close>
+            <svg class="iconbtn" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-links">
+              <li>
+                <a class="mobile-link mobile-box" href="./index.html">Studio</a>
+              </li>
+              <li>
+                <a class="mobile-link" href="#our-portfolio">Portfolio</a>
+              </li>
+              <li><a class="mobile-link" href="">Contacts</a></li>
+            </ul>
+          </nav>
+          <address class="mobile-contact">
+            <ul class="mobile-cont-links">
+              <li>
+                <a class="mobile-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a
+                  class="mobile-link colormail"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div>
+            <ul class="mobile-social-icon">
+              <li class="mobile-icon-fon">
+                <a class="mobile-icon-link" href="">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-icon-fon">
+                <a class="mobile-icon-link" href="">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter-11"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-icon-fon">
+                <a class="mobile-icon-link" href="">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-icon-fon">
+                <a class="mobile-icon-link" href="">
+                  <svg class="mobile-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -61,7 +130,9 @@
         <div class="container">
           <h1 class="title">Effective Solutions for Your Business</h1>
 
-          <button class="start-scr-btn" type="button">Order Service</button>
+          <button class="start-scr-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -539,9 +610,9 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="close-btn" type="button">
+        <button class="close-btn" type="button" data-modal-close>
           <svg class="iconbtn" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
@@ -616,8 +687,10 @@
                   <use href="./images/icons.svg#icon-click"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="privacy" href=""> Privacy Policy</a>
+              <span>
+                I accept the terms and conditions of the
+                <a class="privacy" href=""> Privacy Policy</a></span
+              >
             </label>
           </div>
 
@@ -625,5 +698,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
